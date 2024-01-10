@@ -1,0 +1,95 @@
+
+body {
+  margin: 0;
+
+}
+
+/* navbar  */
+.nav-link {
+    color: white;
+    filter: brightness(70%);
+}
+
+.nav-link:hover {
+    color: white;
+    filter: brightness(100%);
+}
+
+.navbar-brand {
+    color: white;
+    margin-left: 20px;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+/* card */
+
+.card {
+
+    width: 50vh;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    margin-left: 150px;
+    grid-gap: 100px;
+    list-style: none;
+}
+
+.card-img-top {
+object-fit:contain;
+}
+
+
+/* footer */
+
+.main {
+    min-height: 77.3vh;
+}
+
+.link-footer{
+text-decoration: none;
+color: white;
+position: relative;
+top: 4px;
+right: 52vh;
+margin-left: -150px;
+filter: brightness(70%);
+font-size: 24px;
+}
+
+.link-footer:hover{
+    filter: brightness(100%);
+
+    }
+
+.list-footer {
+    list-style: none;
+}
+
+.footer {
+    display: flex;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    height: 90px;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    bottom: 0px;
+justify-content: center;
+  width: 100%;
+}
+
+
+/* login  */
+
+#form1 {
+    margin-top: 80px;
+    margin-left: 60vh;
+    margin-right: 60vh;
+}
