@@ -4,17 +4,38 @@ import '../css/style.css';
 import {Link} from "gatsby";
 import UseNavigation from "../hooks/use-Navigation";
 import BottomNav from "../hooks/bottom-Navigation"
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby"
+import { StaticQuery} from "gatsby"
+
+import Search from "./search"
+
 
 const Layout = ({ children }) => {
-
+  
 const top = UseNavigation()
 const bottom = BottomNav()
 
 
+
+
     return (
-    <div>
+
+      <StaticQuery
+      query={graphql`
+        query SearchIndexQuery {
+          siteSearchIndex {
+            index
+          }
+        }
+      `}
+      render={data => (
+        <header>
+          <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="navbar-brand">Navbar</a>
+    
+  <a  class="navbar-brand">Navbar</a>
+ 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -30,6 +51,9 @@ const bottom = BottomNav()
         )
 })}
     </ul>
+  </div>
+  <div  className="search">
+  <Search className="search" searchIndex={data.siteSearchIndex.index} />
   </div>
 </nav>
       <main className="main">{children}</main>
@@ -49,6 +73,12 @@ const bottom = BottomNav()
         </ul>
         </footer>
     </div>
+         
+        </header>
+      )}
+    />
+      
+    
 
 )
     }

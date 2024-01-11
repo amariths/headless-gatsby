@@ -93,3 +93,8 @@ justify-content: center;
     margin-left: 60vh;
     margin-right: 60vh;
 }
+
+.search {
+    margin-right: 50px;
+    margin-top: 10px;
+}

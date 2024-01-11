@@ -27,7 +27,7 @@ function Page(props) {
                     return <KontaktTemplate {...contentfulPage} />;
                 case 'policy' :
                     return <PolicyTemplate {...contentfulPage} />;
-                case 'cms-kurs' :
+                case 'CMS-kurs' :
                     return <KursTemplate {...contentfulPage} />;
                 default:
                     return <HomeTemplate {...contentfulPage} />;

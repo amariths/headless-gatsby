@@ -14,13 +14,36 @@ require("dotenv").config({
 
 
 module.exports = {
+  flags: {
+    DEV_SSR: true
+  },
   siteMetadata: {
     title: `Gatsby ITHS`,
     description: `Enkel starter template för ITHS-studenter`,
-    author: `Håkan Gleissman`,
+    author: `Amar Mehdi`,
     siteUrl: `http://dummy-site.com`,
   },
   plugins: [
+    {
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fields to index
+        fields: [`slug`, `namn`],
+        // How to resolve each field`s value for a supported node type
+        resolvers: {
+          // For any node of type MarkdownRemark, list how to resolve the fields` values
+          
+          ContentfulPortfolioItems : {
+            namn: (node) => node.namn,
+            slug: (node) => node.slug,
+            
+         
+            // Add more fields as needed
+          },
+        },
+        
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
