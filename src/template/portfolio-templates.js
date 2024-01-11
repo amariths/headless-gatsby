@@ -2,9 +2,6 @@ import React, {useState} from "react"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/js/dist/util';
-import 'bootstrap/js/dist/dropdown';
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
@@ -97,15 +94,15 @@ console.log(posts)
             return(
 
                 <li className="post" key={edge.node.id}>
-                    <div class="card">
-                    {edge.node.bild && <GatsbyImage class="card-img-top" alt={edge.node.namn} image={edge.node.bild.gatsbyImage} />}
-                        <div class="card-body">
-                         <h5 class="card-title">
+                    <div className="card">
+                    {edge.node.bild && <GatsbyImage className="card-img" alt={edge.node.namn} image={edge.node.bild.gatsbyImage} />}
+                        <div className="card-body">
+                         <h5 className="card-title">
                          <Link to={`/portfolio/${edge.node.slug}/`}>
                              {edge.node.namn}
                           </Link>
                          </h5>
-                         { edge.node.description && <p class="card-text"> {edge.node.description.description}</p>}
+                         { edge.node.description && <p className="card-text"> {edge.node.description.description}</p>}
 
                       </div>
                       </div>
