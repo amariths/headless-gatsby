@@ -67,7 +67,7 @@ function Login(contentfulPage) {
 
   return (
     <div>
-         {/* {renderRichText(contentfulPage.content, options)} */}
+         {renderRichText(contentfulPage.content, options)}
     <div id="form1">
         <h2>{contentfulPage.title} template</h2>
                 <span>{Logged ? form : submitted}</span>
