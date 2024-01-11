@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from '../components/layout';
 
 
+
 export const query = graphql`
 query ($slug: String!)  {
 

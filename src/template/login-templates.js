@@ -1,10 +1,24 @@
 import React, { useState, useContext } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 import Alert from 'react-bootstrap/Alert'
 
 function Login(contentfulPage) {
+
+    const options = {
+        renderMark: {
+          [MARKS.BOLD]: (text) => <b className="font-bold">{text}</b>,
+        },
+        renderNode: {
+    
+          [BLOCKS.HEADING_2]: (node, children) => {
+            return <h2>{children}</h2>
+          },
+        },
+      }
 
     
     const [Logged, setLogged] = useState(true)
@@ -52,11 +66,14 @@ function Login(contentfulPage) {
 
 
   return (
+    <div>
+         {/* {renderRichText(contentfulPage.content, options)} */}
     <div id="form1">
         <h2>{contentfulPage.title} template</h2>
                 <span>{Logged ? form : submitted}</span>
 
 
+            </div>
             </div>
   )
 }

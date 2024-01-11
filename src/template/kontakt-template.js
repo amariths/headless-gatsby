@@ -2,6 +2,7 @@ import React from 'react'
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
+
 function Kontakt(contentfulPage) {
     const options = {
         renderMark: {

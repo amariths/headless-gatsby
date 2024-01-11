@@ -2,6 +2,8 @@ import React, {useState,} from 'react'
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 
 function CMS(contentfulPage) {

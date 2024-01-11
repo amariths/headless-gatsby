@@ -5,6 +5,8 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/dropdown';
+import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 import Layout from "../components/layout"
 
