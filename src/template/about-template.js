@@ -1,6 +1,7 @@
 import React from 'react'
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 function AboutTemplate(contentfulPage) {
   const options = {
@@ -21,6 +22,7 @@ function AboutTemplate(contentfulPage) {
       about template
       om oss
       {renderRichText(contentfulPage.content, options)}
+      {contentfulPage.image && <GatsbyImage alt={contentfulPage.title} image={contentfulPage.image.gatsbyImage} />}
 
     </div>
   )

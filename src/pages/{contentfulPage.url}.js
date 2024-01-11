@@ -50,6 +50,9 @@ query pageQuery($id: String) {
         content {
             raw
         }
+        image {
+            gatsbyImage(width: 500)
+          }
 
         template
     }
