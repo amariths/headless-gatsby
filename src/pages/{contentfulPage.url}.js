@@ -17,8 +17,8 @@ function Page(props) {
     const {contentfulPage} = data;
        const getTemplate = (contentfulPage) => {
             switch (contentfulPage.template) {
-                // case 'about' :
-                //     return <AboutTemplate {...contentfulPage} />;
+                case 'about' :
+                     return <AboutTemplate {...contentfulPage} />;
                 case 'login' :
                     return <LoginTemplate {...contentfulPage} />;
                 case 'portfolio' :

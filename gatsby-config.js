@@ -14,9 +14,7 @@ require("dotenv").config({
 
 
 module.exports = {
-  flags: {
-    DEV_SSR: true
-  },
+  
   siteMetadata: {
     title: `Gatsby ITHS`,
     description: `Enkel starter template för ITHS-studenter`,
