@@ -8,7 +8,7 @@ function UseNavigation() {
     const top = useStaticQuery(graphql`
     query {
       allContentfulPage(
-        sort: {updatedAt: ASC}
+        sort: {createdAt: ASC}
         filter: {navigation: {eq: "top-navigation"}}
         ) {
         edges {
