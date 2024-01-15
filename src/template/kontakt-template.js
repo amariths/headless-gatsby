@@ -17,7 +17,7 @@ function Kontakt(contentfulPage) {
         },
       }
   return (
-    <div>
+    <div className='kontakt'>
         <h2>{contentfulPage.title}</h2>
         {renderRichText(contentfulPage.content, options)}
     </div>

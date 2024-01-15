@@ -26,7 +26,7 @@ query {
             description
           }
           bild {
-            gatsbyImage(layout: CONSTRAINED, width: 300, )
+            gatsbyImage(layout: FULL_WIDTH, fit: CONTAIN, width: 500, height: 300)
           }
           slug
         }
@@ -80,9 +80,9 @@ console.log(posts)
 
    return (
     <div>
-        <h2>{contentfulPage.title}</h2>
+        <h1>{contentfulPage.title}</h1>
         <span>portfolio template</span>
-        <input
+        <input className="portfoliofilter"
               type="text"
               aria-label="Search"
               placeholder="Type to filter posts..."
@@ -94,7 +94,7 @@ console.log(posts)
             return(
 
                 <li className="post" key={edge.node.id}>
-                    <div className="card">
+                   
                     {edge.node.bild && <GatsbyImage className="card-img" alt={edge.node.namn} image={edge.node.bild.gatsbyImage} />}
                         <div className="card-body">
                          <h5 className="card-title">
@@ -105,7 +105,7 @@ console.log(posts)
                          { edge.node.description && <p className="card-text"> {edge.node.description.description}</p>}
 
                       </div>
-                      </div>
+                      
 
                 </li>
             )

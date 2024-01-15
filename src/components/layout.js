@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticQuery} from "gatsby"
 
+
 import Search from "./search"
 
 
@@ -31,28 +32,27 @@ const bottom = BottomNav()
       render={data => (
         <header>
           <div>
-            
-    <nav className="navbar-bg">
+          <nav className="navbar-bg">
     
-        <a  className="navbar-brand">Navbar</a>
- 
-       <div id="navbarNav">
-              <ul className="navbar-nav">
-                  {top.map((edge) => {
-                    return (
+    <a  className="navbar-brand">Navbar</a>
 
-                         <li className="nav-item">
-                            <a className="nav-link" href={edge.node.url}>{edge.node.title}</a>
-                         </li>
+   <div id="navbarNav">
+          <ul className="navbar-nav">
+              {top.map((edge) => {
+                return (
 
-                    )
-                  })}
-              </ul>
-       </div>
-             <div  className="search">
-                <Search className="search" searchIndex={data.siteSearchIndex.index} />
-             </div>
-    </nav>
+                     <li className="nav-item">
+                        <a className="nav-link" href={edge.node.url}>{edge.node.title}</a>
+                     </li>
+
+                )
+              })}
+          </ul>
+   </div>
+         <div  className="search">
+            <Search className="search" searchIndex={data.siteSearchIndex.index} />
+         </div>
+</nav>
 
 
 

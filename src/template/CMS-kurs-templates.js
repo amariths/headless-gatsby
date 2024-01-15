@@ -97,17 +97,18 @@ const posts = hasSearchResults ? filteredData : allposts
 {posts && posts.map((edge) => {
     return(
 
-        <li className="post" key={edge.node.id}>
-            <div class="card">
+        <li className="post1" key={edge.node.id}>
+           
 
                 <div class="card-body">
                  <h5 class="card-title">
                  {edge.node.title}
                  </h5>
+                 <p className='card-text'>
                  { edge.node.description.description}
-
+                 </p>
               </div>
-              </div>
+              
 
         </li>
     )

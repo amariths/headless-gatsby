@@ -51,7 +51,7 @@ query pageQuery($id: String) {
             raw
         }
         image {
-            gatsbyImage(width: 500)
+            gatsbyImage(width: 700)
           }
 
         template

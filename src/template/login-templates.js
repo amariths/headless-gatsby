@@ -63,20 +63,36 @@ function Login(contentfulPage) {
         </Form>
     )
 
+    const form1 = (
+        <form  onSubmit={handleSubmit}>
+        <h3>Login Here</h3>
+
+        <label for="username">Email address</label>
+        <input className='input' type="text" placeholder="Email" id="username"/>
+
+        <label for="password">Password</label>
+        <input className='input' type="password" placeholder="Password" id="password"/>
+
+        <button onClick={Click}>Log In</button>
+
+    </form>
+    )
+
     const submitted = (
-        <Alert variant="success">Thank you for logging in! we will respond shortly</Alert>
+        <Alert className='success' variant="success">Thank you for logging in! we will respond shortly</Alert>
     )
   
 
   return (
-    <div>
+    <div className='bg'>
           
-         {renderRichText(contentfulPage.content, options)}
+        <h2 className='login-template'>{renderRichText(contentfulPage.content, options)}</h2>
+        <h2 className='login-template'>{contentfulPage.title} template</h2>
     <div id="form1">
-        <h2>{contentfulPage.title} template</h2>
-                <span>{Logged ? form : submitted}</span>
+        
+                <span className='login'>{Logged ? form1 : submitted}</span>
 
-                {contentfulPage.image && <GatsbyImage alt={contentfulPage.title} image={contentfulPage.image.gatsbyImage} />}
+                {contentfulPage.image && <GatsbyImage className='image' alt={contentfulPage.title} image={contentfulPage.image.gatsbyImage} />}
 
             </div>
             </div>
