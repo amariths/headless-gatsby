@@ -18,37 +18,65 @@ span {
 
 
 /* navbar  */
-.navbar-bg {
-    display: flex;
+
+
+
+.navbar1 {
+    height: 400px;
+}
+
+
+
+.navbar-brand1 {
+    color: white;
+   position: relative;
+   top: 20px;
+}
+
+
+.navbar {
     height: 80px;
-    background-color: rgb(24, 26, 27);
 }
 
 
 .navbar-nav {
-    flex-direction: row;
-    list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  top: 15px;
-  left: 20px;
+    margin-top: 20px;
 }
-
-
-.nav-item {
-    float: left;
-    text-decoration: none;
-    font-size: 18px;
-}
-
 
 .nav-link {
     color: white;
     filter: brightness(70%);
     text-decoration: none;
-    display: block;
-    padding: 8px;
+   
+
+}
+
+.container-fluid {
+    height: 50px;
+    
+}
+
+.navbar-toggler {
+    width: auto;
+    height: 40px;
+    margin:auto;
+    background-color: #212529;
+    
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    
+    
+}
+
+
+.navbar-toggler-icon {
+    color: white;
+    
+}
+
+.navbar-collapse {
+    margin-top: 30px;
 }
 
 .nav-link:hover {
@@ -58,9 +86,8 @@ span {
 
 .navbar-brand {
     color: white;
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 25px;
+   position: relative;
+   
 }
 
 .navbar-brand:hover {
@@ -165,7 +192,7 @@ justify-content: center;
     margin-top: 80px;
     margin-left: 60vh;
     margin-right: 60vh;
-   margin-bottom: -0;
+   margin-bottom: -0px;
 }
 
 .login {
@@ -195,7 +222,7 @@ justify-content: center;
 
 
 form{
-    height: 400px;
+    height: 500px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
     position: relative;
@@ -278,11 +305,30 @@ button{
 }
 
 .search {
-    margin-right: 100px;
-    margin-top: 20px;
-    position: absolute;
-    right: 0;
     
+ 
+ position: relative;
+ top: 50px;
+    
+}
+
+
+
+.btn {
+    margin: 0;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    height: fit-content;
+    position: relative;
+    bottom: 4px;
+}
+
+.search-form {
+    display: flex;
+    position: absolute;
+    right: 40px;
+    height: 50px;
+    top: 20px;
 }
 
 .portfoliofilter {

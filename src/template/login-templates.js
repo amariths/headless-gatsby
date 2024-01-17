@@ -64,7 +64,7 @@ function Login(contentfulPage) {
     )
 
     const form1 = (
-        <form  onSubmit={handleSubmit}>
+        <form className='formm' onSubmit={handleSubmit}>
         <h3>Login Here</h3>
 
         <label for="username">Email address</label>

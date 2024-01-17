@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from '../components/layout';
+import Layout2 from '../components/layout2';
 
 
 
@@ -25,13 +26,13 @@ function Items(props) {
 
 
   return (
-    <Layout>
+    <Layout2>
     <Link to="/portfolio/">Visit the portfolio items Page</Link>
     <div className="content">
       <h1>{props.data.contentfulPortfolioItems.namn}</h1>
       <span>{props.data.contentfulPortfolioItems.description.description}</span>
     </div>
-  </Layout>
+  </Layout2>
   )
 }
 

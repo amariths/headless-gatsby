@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import Layout2 from '../components/layout2';
 import AboutTemplate from '../template/about-template'
 import HomeTemplate from '../template/home-template'
 import LoginTemplate from '../template/login-templates'
@@ -30,17 +31,17 @@ function Page(props) {
                     return <PolicyTemplate {...contentfulPage} />;
                 case 'CMS-kurs' :
                     return <KursTemplate {...contentfulPage} />;
-                case 'home' :
-                    return <HomeTemplate {...contentfulPage} />;
-                default:
+                case '404' :
                     return <ErrorTemplate {...contentfulPage} />;
+                default:
+                    return <HomeTemplate {...contentfulPage} />;
             }
         };
 
 
         return (
 
-        <Layout>{getTemplate(contentfulPage)}</Layout>
+        <Layout2>{getTemplate(contentfulPage)}</Layout2>
 
         );
 }
