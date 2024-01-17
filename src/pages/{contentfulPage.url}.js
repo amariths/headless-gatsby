@@ -8,6 +8,7 @@ import PortfolioTemplate from '../template/portfolio-templates'
 import KontaktTemplate from '../template/kontakt-template'
 import PolicyTemplate from '../template/policy-templates'
 import KursTemplate from '../template/CMS-kurs-templates'
+import ErrorTemplate from '../template/404'
 
 
 
@@ -29,8 +30,10 @@ function Page(props) {
                     return <PolicyTemplate {...contentfulPage} />;
                 case 'CMS-kurs' :
                     return <KursTemplate {...contentfulPage} />;
-                default:
+                case 'home' :
                     return <HomeTemplate {...contentfulPage} />;
+                default:
+                    return <ErrorTemplate {...contentfulPage} />;
             }
         };
 

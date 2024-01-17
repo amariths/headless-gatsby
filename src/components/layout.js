@@ -42,7 +42,8 @@ const bottom = BottomNav()
                 return (
 
                      <li className="nav-item">
-                        <a className="nav-link" href={edge.node.url}>{edge.node.title}</a>
+
+                        {edge.node.url != '/404' && <a className="nav-link" href={edge.node.url}>{edge.node.title}</a>}
                      </li>
 
                 )
